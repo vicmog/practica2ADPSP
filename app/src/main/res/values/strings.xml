@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">practica2ADPSP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_titulo_permisos">Solicitud de permisos</string>
+    <string name="str_explicacion_permiso">Necesitamos este permiso para exportar los contactos de tu agenda.</string>
+    <string name="str_aceptar">Aceptar</string>
+    <string name="str_cancel">Cancelar</string>
+    <string name="str_permiso2">Necesitamos este permiso para poder registrar las llamadas de tus amigos</string>
+    <string name="str_Nombre">Nombre</string>
+    <string name="str_telefono">Telefono</string>
+    <string name="str_fecha_nacimiento">Fecha Nacimiento</string>
+    <string name="str_actualizar">Actualizar</string>
+    <string name="str_atras">Atras</string>
+    <string name="str_añadir">Añadir</string>
+</resources>
