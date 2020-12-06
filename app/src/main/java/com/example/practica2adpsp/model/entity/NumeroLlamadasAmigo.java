@@ -34,6 +34,6 @@ public class NumeroLlamadasAmigo {
 
     @Override
     public String toString() {
-        return amigo +"Llamadas perdidas " + count ;
+        return amigo +"Numero de Llamadas:" + count ;
     }
 }

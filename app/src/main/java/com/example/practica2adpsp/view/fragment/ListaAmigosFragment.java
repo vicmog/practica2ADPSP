@@ -28,6 +28,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 import com.example.practica2adpsp.R;
@@ -80,12 +81,12 @@ public class ListaAmigosFragment extends Fragment{
     private void init() {
 
         buscaListaAmigos();
-        FloatingActionButton fabAddAmigos = getView().findViewById(R.id.btAddFirstFragment);
-        fabAddAmigos.setOnClickListener(new View.OnClickListener() {
+        Button btAddAmigos = getView().findViewById(R.id.btAddAmigo);
+        btAddAmigos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 compruebaPermisoRegistraLlamadas();
-                //add
+                navController.navigate(R.id.amigoAddFragment);
             }
         });
 

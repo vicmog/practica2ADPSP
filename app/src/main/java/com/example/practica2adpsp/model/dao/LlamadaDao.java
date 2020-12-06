@@ -28,6 +28,7 @@ public interface LlamadaDao {
     long insert(Llamada llamadas);
     @Update
     int update (Llamada llamada);
+
     @Query("select a.id, a.telefono, a.nombre,a.fechaNacimiento, count(l.id) count from amigos a left join llamadas l on a.id = l.id_amigo group by a.id, a.telefono, a.nombre,a.fechaNacimiento order by l.fecha_llamada")
     LiveData<List<NumeroLlamadasAmigo>> getAllNumeroLlamadas();
 

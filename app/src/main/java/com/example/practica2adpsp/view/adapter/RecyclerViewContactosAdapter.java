@@ -50,7 +50,11 @@ public class RecyclerViewContactosAdapter extends RecyclerView.Adapter<RecyclerV
         holder.parent_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String tel = contactos.get(position).getTelefono();
+                if(Amigo.esTelefonoFormato(tel)){
+                    tel = Amigo.procesaNumero(tel);
+                }
+                contactos.get(position).setTelefono(tel);
                 viewModelCompartido.insertAmigo(contactos.get(position));
                 navController.navigate(R.id.firstFragment);
 

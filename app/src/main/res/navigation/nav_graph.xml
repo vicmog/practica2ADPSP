@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_firstFragment_to_amigoUpdateFragment"
             app:destination="@id/amigoUpdateFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_amigoAddFragment"
+            app:destination="@id/amigoAddFragment" />
     </fragment>
     <fragment
         android:id="@+id/listaContactosFragment"
@@ -33,6 +36,15 @@
         tools:layout="@layout/fragment_amigo_update" >
         <action
             android:id="@+id/action_amigoUpdateFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/amigoAddFragment"
+        android:name="com.example.practica2adpsp.view.fragment.AmigoAddFragment"
+        android:label="fragment_amigo_add"
+        tools:layout="@layout/fragment_amigo_add" >
+        <action
+            android:id="@+id/action_amigoAddFragment_to_firstFragment"
             app:destination="@id/firstFragment" />
     </fragment>
 </navigation>
