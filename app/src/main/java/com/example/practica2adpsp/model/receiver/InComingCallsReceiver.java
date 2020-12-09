@@ -21,7 +21,7 @@ public class InComingCallsReceiver extends BroadcastReceiver {
 private Repository repos;
 private static String number;
 private Context ctx;
-private ViewModelCompartido viewModelCompartido;
+
 
     @Override
     public void onReceive(Context context, Intent intent) {
