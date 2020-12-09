@@ -55,7 +55,8 @@ public class AmigoUpdateFragment extends Fragment {
         btAtras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.firstFragment);
+                //navController.navigate(R.id.firstFragment);
+                navController.popBackStack();
             }
         });
         btUpdate.setOnClickListener(new View.OnClickListener() {
