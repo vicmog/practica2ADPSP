@@ -126,7 +126,7 @@ public class ListaAmigosFragment extends Fragment{
             case R.id.importarContactos:
 
                 compruebaPermisoContactos();
-                compruebaPermisoRegistraLlamadas();
+
                 if(permisoContactos){
                  navController.navigate(R.id.listaContactosFragment);
                 }
