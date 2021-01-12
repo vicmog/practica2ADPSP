@@ -19,25 +19,22 @@ import java.util.Calendar;
 public class InComingCallsReceiver extends BroadcastReceiver {
 
 private Repository repos;
-private static String number;
-private Context ctx;
+private String number;
+
 
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        ctx = context;
+
         String state = intent.getStringExtra(TelephonyManager.EXTRA_STATE);
 
         if(state.equals(TelephonyManager.EXTRA_STATE_RINGING)){
 
-             number = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
-
-
-        }else if(state.equals(TelephonyManager.EXTRA_STATE_IDLE)){
-
+            number = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
             repos = new Repository(context);
             number =  Amigo.procesaNumero(number);
             repos.getAmigoLlamada(number);
+
         }
         }
     }

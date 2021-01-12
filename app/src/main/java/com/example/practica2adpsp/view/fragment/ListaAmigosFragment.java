@@ -56,13 +56,13 @@ public class ListaAmigosFragment extends Fragment{
     private List<NumeroLlamadasAmigo>listaNumeroLlamadas = new ArrayList<>();;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_lista_amigos, container, false);
+        View views = inflater.inflate(R.layout.fragment_lista_amigos, container, false);
 
         setHasOptionsMenu(true);
-        toolbar = view.findViewById(R.id.miToolbarFirstFragment);
+        toolbar = views.findViewById(R.id.miToolbarFirstFragment);
         ((AppCompatActivity) this.getActivity()).setSupportActionBar(toolbar); //cargar menu en toolbar fragments.
         toolbar.inflateMenu(R.menu.menu_action_bar);
-        return view;
+        return views;
     }
 
 

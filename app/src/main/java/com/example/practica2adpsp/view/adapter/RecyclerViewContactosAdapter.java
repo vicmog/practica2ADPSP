@@ -26,6 +26,8 @@ public class RecyclerViewContactosAdapter extends RecyclerView.Adapter<RecyclerV
     private ViewModelCompartido viewModelCompartido;
     private Activity activity;
     private View vista;
+
+
     public RecyclerViewContactosAdapter(List<Amigo> contactos, Activity act,View vista) {
         this.contactos = contactos;
         this.activity = act;

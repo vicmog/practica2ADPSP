@@ -12,11 +12,6 @@ public class Llamada {
     @PrimaryKey(autoGenerate = true)
     private int id;
 
-    /*foreignKeys = @ForeignKey(
-            entity = Amigo.class,
-            parentColumns = "id",
-            childColumns = "id_amigo",
-            onDelete = ForeignKey.RESTRICT)*/
     @NonNull
     @ColumnInfo(name = "id_amigo")
     private int id_amigo;

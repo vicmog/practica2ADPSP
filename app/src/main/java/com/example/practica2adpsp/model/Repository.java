@@ -154,13 +154,17 @@ public class Repository {
         public void run() {
             super.run();
             int idAmigoLlamada = amigoDao.getIdAmigoLlamada(number);
-            Calendar calendar = Calendar.getInstance();
-            int año = calendar.get(Calendar.YEAR);
-            int mes = calendar.get(Calendar.MONTH) + 1;
-            int dia = calendar.get(Calendar.DAY_OF_MONTH);
-            String fecha = dia+"/"+mes+"/"+año;
-            Llamada llamada = new Llamada(idAmigoLlamada,fecha);
-            llamadaDao.insert(llamada);
+
+            if(idAmigoLlamada!=0){
+                Calendar calendar = Calendar.getInstance();
+                int año = calendar.get(Calendar.YEAR);
+                int mes = calendar.get(Calendar.MONTH) + 1;
+                int dia = calendar.get(Calendar.DAY_OF_MONTH);
+                String fecha = dia+"/"+mes+"/"+año;
+                Llamada llamada = new Llamada(idAmigoLlamada,fecha);
+                llamadaDao.insert(llamada);
+            }
+
 
 
         }
